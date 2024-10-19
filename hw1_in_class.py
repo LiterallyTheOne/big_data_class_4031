@@ -8,7 +8,7 @@ max_volume = data["Volume"].max()
 min_volume = data["Volume"].min()
 
 
-data_1 = data[data["Volume"] > min_volume * 0.9]
+data_1 = data[data["Volume"] > min_volume * 1.1]
 
 data_2 = data_1[data_1["Volume"] < max_volume * 0.9]
 
