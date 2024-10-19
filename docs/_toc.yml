@@ -4,4 +4,5 @@
 format: jb-book
 root: intro
 chapters:
+  - file: session_2024_10_19
   - file: docker_daemon
