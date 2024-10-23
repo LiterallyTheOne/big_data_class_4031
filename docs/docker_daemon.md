@@ -51,6 +51,6 @@ The main difference between `Docker Daemon` and
 
 ![different hypervisors](figures/hypervisor-types.png)
 
-:::note
+:::{note}
 source of the image: https://www.appviewx.com/education-center/hypervisor/
 :::
