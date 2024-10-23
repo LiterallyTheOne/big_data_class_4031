@@ -2,7 +2,7 @@
 import numpy as np 
 import pandas as pd
 
-data = pd.read_csv("data/nasdaq.csv",parse_dates=["Date"])
+data = pd.read_csv("../data/nasdaq.csv", parse_dates=["Date"])
 
 max_volume = data["Volume"].max()
 min_volume = data["Volume"].min()
