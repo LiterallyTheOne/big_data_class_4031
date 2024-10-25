@@ -9,6 +9,22 @@
 `Docker` needs `WSL` or `Hyper-v` in order to work on `Windows`
 :::
 
+As you can see in the picture above, the basic
+architecture of docker consists of three main components:
+
+* Client
+* Docker host
+* Registry
+
+Docker uses a client-server architecture.
+Docker daemon listens to the Docker client.
+Both Docker daemon and Docker client can run
+on the same machine.
+But we can have remote Docker daemon as well.
+the communication between the Docker daemon and Docker client
+is through **REST API**.
+We are going to discuss more about them.
+
 ## Docker Daemon vs Virtual Environment
 
 The main differences between `Docker Daemon` and
