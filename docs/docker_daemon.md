@@ -128,3 +128,13 @@ sources:
 
 ## Union file system
 
+`Docker` uses `Union file system` like `OverlayFS` to manage container images.
+This allows images to be built in layers.
+When you run a container, you only run the necessary layers.
+
+![Union file system](figures/union_file_system.png)
+
+:::note
+image srouce: https://wvi.cz/diyC/images-containers/ 
+:::
+
