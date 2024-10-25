@@ -154,3 +154,10 @@ When you run a container, you only run the necessary layers.
 image srouce: https://wvi.cz/diyC/images-containers/ 
 :::
 
+
+## Docker vs Wine
+
+* `Docker`:
+  * os level virtualization
+* `Wine`:
+  * Wine is a compatibility layer, not a `virtualizer`. It translates `Windows` system calls into `Linux/Unix` system calls in real-time
