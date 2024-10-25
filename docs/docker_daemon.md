@@ -82,9 +82,16 @@ One use of namespaces is to implement `containers`.
 We have different types of namespaces:
 
 * `pid_namespaces` 
-  * `pid_namespaces` isolate the process ID number space.
+  * isolate the process ID number space.
 * `network_namespaces`
-  * `network_namespaces` provide isolation of the system resources associated with networking 
+  * provide isolation of the system resources associated with networking 
+* `mount_namespaces` 
+  * provide isolation of the list of mounts seen by the processes in each namespace instance 
+* `uts_namespaces`
+  * provide isolation of two system identifiers: the hostname and the NIS domain name 
+  * UTS: UNIX Timesharing system
+* `user_namespaces`
+  * isolate security-related identifiers and attributes, in particular, user IDs and group IDs 
 
 
 
@@ -93,6 +100,9 @@ sources:
 * https://man7.org/linux/man-pages/man7/namespaces.7.html
 * https://man7.org/linux/man-pages/man7/pid_namespaces.7.html 
 * https://man7.org/linux/man-pages/man7/network_namespaces.7.html
+* https://man7.org/linux/man-pages/man7/mount_namespaces.7.html 
+* https://man7.org/linux/man-pages/man7/uts_namespaces.7.html
+* https://man7.org/linux/man-pages/man7/user_namespaces.7.html
 * https://man7.org/linux/man-pages/man7/cgroup_namespaces.7.html 
 * https://harsh05.medium.com/understanding-namespaces-in-docker-0bbcf7697775
 
@@ -103,7 +113,7 @@ sources:
 Control groups, usually referred to as cgroups, are a Linux
 kernel feature which allow processes to be organized into
 hierarchical groups whose usage of various types of resources can
-then be limited and monitored.
+then be **limited** and **monitored**.
 
 * `cgroup_namespaces`  
     * `unshare`
