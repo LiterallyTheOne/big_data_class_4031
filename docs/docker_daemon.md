@@ -4,9 +4,14 @@
 
 ![Docker architecture](figures/docker_architecture.jpg)
 
+
+:::{note}
+`Docker` needs `WSL` or `Hyper-v` in order to work on `Windows`
+:::
+
 ## Docker Daemon vs Virtual Environment
 
-The main difference between `Docker Daemon` and
+The main differences between `Docker Daemon` and
 `Virtual environment`:
 
 * `Virtual environment`:
@@ -54,3 +59,62 @@ The main difference between `Docker Daemon` and
 :::{note}
 source of the image: https://www.appviewx.com/education-center/hypervisor/
 :::
+
+## Linux namespaces
+
+<!--
+https://harsh05.medium.com/understanding-namespaces-in-docker-0bbcf7697775
+
+Namespaces provide a layer of isolation. 
+Namespaces are a feature of Linux Kernel that partition kernel resources
+in a way that one set of processes one set of resources while
+another set of processes sees a different set of resources.
+
+-->
+
+A namespace wraps a global system resource in an abstraction that
+makes it appear to the processes within the namespace that they
+have their own isolated instance of the global resource.  Changes
+to the global resource are visible to other processes that are
+members of the namespace, but are invisible to other processes.
+One use of namespaces is to implement `containers`.
+
+We have different types of namespaces:
+
+* `pid_namespaces` 
+  * `pid_namespaces` isolate the process ID number space.
+* `network_namespaces`
+  * `network_namespaces` provide isolation of the system resources associated with networking 
+
+
+
+:::note
+sources:
+* https://man7.org/linux/man-pages/man7/namespaces.7.html
+* https://man7.org/linux/man-pages/man7/pid_namespaces.7.html 
+* https://man7.org/linux/man-pages/man7/network_namespaces.7.html
+* https://man7.org/linux/man-pages/man7/cgroup_namespaces.7.html 
+* https://harsh05.medium.com/understanding-namespaces-in-docker-0bbcf7697775
+
+:::
+
+## Linux `cgroups`
+
+Control groups, usually referred to as cgroups, are a Linux
+kernel feature which allow processes to be organized into
+hierarchical groups whose usage of various types of resources can
+then be limited and monitored.
+
+* `cgroup_namespaces`  
+    * `unshare`
+
+
+:::note
+sources:
+* https://man7.org/linux/man-pages/man7/cgroups.7.html 
+* https://man7.org/linux/man-pages/man7/cgroup_namespaces.7.html 
+* https://man7.org/linux/man-pages/man1/unshare.1.html 
+:::
+
+## Union file system
+
