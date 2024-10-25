@@ -111,7 +111,7 @@ We have different types of namespaces:
 
 
 
-:::note
+:::{note}
 sources:
 * https://man7.org/linux/man-pages/man7/namespaces.7.html
 * https://man7.org/linux/man-pages/man7/pid_namespaces.7.html 
@@ -135,7 +135,7 @@ then be **limited** and **monitored**.
     * `unshare`
 
 
-:::note
+:::{note}
 sources:
 * https://man7.org/linux/man-pages/man7/cgroups.7.html 
 * https://man7.org/linux/man-pages/man7/cgroup_namespaces.7.html 
@@ -150,7 +150,7 @@ When you run a container, you only run the necessary layers.
 
 ![Union file system](figures/union_file_system.png)
 
-:::note
+:::{note}
 image srouce: https://wvi.cz/diyC/images-containers/ 
 :::
 
