@@ -161,3 +161,9 @@ image srouce: https://wvi.cz/diyC/images-containers/
   * os level virtualization
 * `Wine`:
   * Wine is a compatibility layer, not a `virtualizer`. It translates `Windows` system calls into `Linux/Unix` system calls in real-time
+
+
+## Docker vs Flatpak
+
+* Both are using container technologies.
+* Both using `namespaces` and `cgroups` to isolate an app.
