@@ -1,9 +1,9 @@
 a x
 a p
+b x
 a y
+b y
 a x
 a p
 b z
-b x
-b y
 b z
