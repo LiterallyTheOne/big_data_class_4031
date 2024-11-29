@@ -15,9 +15,7 @@ def main():
     rdd = rdd.reduceByKey(lambda x, y: x + y)
     rdd = rdd.filter(lambda x: x[1] > 1)
 
-    rdd = rdd.map(lambda x: (x[0].split(" ")[0], x[1]))
-    rdd = rdd.map(lambda x: (x[0], 1))
-
+    rdd = rdd.map(lambda x: (x[0].split(" ")[0], 1))
     rdd = rdd.reduceByKey(lambda x, y: x + y)
 
     result = rdd.collect()
