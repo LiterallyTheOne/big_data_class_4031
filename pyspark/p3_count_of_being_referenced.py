@@ -38,8 +38,8 @@ def main():
     rdd = rdd.flatMap(mapper)
     rdd = rdd.groupByKey()
 
-    rdd = rdd.mapValues(len)
-    rdd = rdd.sortBy(lambda x: x[1], ascending=False)
+    rdd = rdd.mapValues(len)  # type: ignore
+    rdd = rdd.sortBy(lambda x: x[1], ascending=False)  # type: ignore
 
     result = rdd.collect()
 

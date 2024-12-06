@@ -24,7 +24,7 @@ def main():
     rdd = rdd.groupByKey()
 
     sum_rdd = rdd.mapValues(sum)
-    len_rdd = rdd.mapValues(len)
+    len_rdd = rdd.mapValues(len)  # type: ignore
 
     result_sum = sum_rdd.collect()
     result_len = len_rdd.collect()
