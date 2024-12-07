@@ -1,4 +1,4 @@
-"""average views of rate >= 3 and rate < 3
+"""Count of being referenced
 
 0  | 1        | 2   | 3        | 4      | 5     | 6    | 7       | 8        | 9
 id | uploader | age | category | length | views | rate | ratings | comments | related_ids
