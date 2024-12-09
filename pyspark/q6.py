@@ -33,7 +33,7 @@ def main():
     rdd = rdd.map(
         lambda x: (
             (
-                x[0],
+                x[1],
                 x[3],
             ),
             (1),
@@ -62,7 +62,7 @@ def main():
 
     result = rdd.collect()
 
-    print(result)
+    # print(result)
 
     for x in result:
         print(x)
