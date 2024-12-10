@@ -40,7 +40,7 @@ def main():
         )
     )
 
-    all_conditions = ["Comedy", "Entertainment", "Music", "Sprots"]
+    all_conditions = ["Comedy", "Entertainment", "Music", "Sports"]
 
     sc.broadcast(all_conditions)
 
