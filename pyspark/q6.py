@@ -56,7 +56,7 @@ def main():
 
     rdd = rdd.map(lambda x: ("more_than_one_category", 1))
 
-    rdd = rdd.reduceByKey(lambda x, y: x + y)
+    rdd = rdd.reduceByKey(lambda x, y: x + y)  # type: ignore
 
     rdd.repartition(1).saveAsTextFile("pyspark/out/")
 
