@@ -44,7 +44,9 @@ def main():
         )
     )
 
-    result = rdd_2.join(rdd_1)
+    rdd_2 = rdd_2.filter(lambda x: x[0] != "c")
+
+    result = rdd_2.rightOuterJoin(rdd_1)
     result = result.distinct()
 
     result = result.collect()  # type: ignore
